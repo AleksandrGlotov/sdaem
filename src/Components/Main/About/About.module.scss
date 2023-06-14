@@ -1,0 +1,113 @@
+@import "../../../styles/varibles.scss";
+
+.about_container {
+    width: 1280px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.about {
+    width: 843px;
+
+    h4 {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        line-height: 30px;
+        margin-bottom: 32px;
+    }
+
+    .text {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 32px;
+
+        .photo {
+            position: relative;
+
+            img {
+                border-radius: 20px;
+                box-shadow: (0px 15px 30px rgba(39, 95, 158, 0.1));
+            }
+
+            &::before {
+                position: absolute;
+                content: url("../../../images/points.png");
+                bottom: -20px;
+                right: -12px;
+            }
+        }
+    }
+
+    p, b {
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+
+.about_news {
+    width: 407px;
+    padding: 32px 23px;
+    background-color: $grey-light-bg;
+    box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 26px;
+    }
+
+    .newsList {
+        margin-bottom: 32px;
+    }
+
+    .news_link {
+        display: block;
+        margin-bottom: 10px;
+
+        p:first-child {
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        p:last-child {
+            font-size: 12px;
+            line-height: 15px;
+            color: $grey-blue;
+            margin-bottom: 10px;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $violet-light-bg;
+        }
+    }
+
+    .newsPageLink {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: $violet;
+
+        svg {
+            rotate: -90deg;
+            margin-left: 5px;
+        }
+    }
+}

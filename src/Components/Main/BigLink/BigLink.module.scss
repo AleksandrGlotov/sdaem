@@ -1,0 +1,74 @@
+@import "../../../styles/varibles.scss";
+
+.bigLink_container {
+    width: 1280px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0 100px;
+}
+
+.bigLink {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .bigLinkInfo {
+        margin-bottom: 5px;
+        padding-right: 15px;
+        border-right: 1px solid $violet-light-bg;
+
+        .counter {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            p,
+            span {
+                font-weight: 700;
+                font-size: 60px;
+                line-height: 73px;
+            }
+
+            p {
+                color: $dark;
+            }
+
+            span {
+                color: $violet;
+            }
+        }
+    }
+
+    p {
+        font-weight: 500;
+        color: $grey-blue;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: $violet-gradient;
+        background-size: 220px;
+        color: white;
+        padding: 10px 18px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 18px;
+        border-left: 1px solid $grey-blue;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-position: -30px;
+        }
+
+        svg {
+            rotate: -90deg;
+
+            path {
+                stroke: white;
+            }
+        }
+    }
+}

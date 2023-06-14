@@ -1,0 +1,47 @@
+@import "../../../styles/varibles.scss";
+
+.modal {
+    background: rgba(46, 46, 46, 0.7);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        width: 400px;
+        padding: 50px;
+        background: $grey-light-bg;
+        box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+        border-radius: 10px;
+
+        h2 {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        button {
+            background-color: $yellow;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            border-radius: 33px;
+            cursor: pointer;
+        }
+    }
+}

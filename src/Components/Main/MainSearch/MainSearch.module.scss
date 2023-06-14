@@ -1,0 +1,208 @@
+@import "../../../styles/varibles.scss";
+
+.main_container {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    background: url("../../../images/404-bg.png") no-repeat,
+        linear-gradient(360deg, #7E6AF3 15.95%, #6540CD 63.1%);
+    background-size: cover;
+    filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+    border-radius: 0 0 40px 40px;
+    z-index: 1;
+
+    h1 {
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        color: white;
+
+        b {
+            color: $yellow;
+            font-weight: 700;
+        }
+    }
+
+    .search {
+        padding: 15px 20px;
+        gap: 20px;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        align-items: center;
+
+        &.isOpenAdd {
+            border-bottom: 1px solid $violet-light-bg;
+            border-radius: 0;
+        }
+
+        .border {
+            height: 68px;
+            width: 1px;
+            background-color: $violet-light-bg;
+        }
+
+        .labeltop>div {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+
+            p {
+                color: $grey-light;
+            }
+        }
+
+        .sortPrice {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                color: $grey-light;
+                font-weight: 500;
+            }
+
+            span {
+                color: $violet;
+                font-weight: 500;
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+
+            input {
+                width: 80px;
+                padding: 10px;
+                background-color: $grey-bg;
+                border-radius: 18px;
+                position: relative;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $violet-light-bg-hover;
+                }
+
+                &::placeholder {
+                    color: $dark;
+                    font-weight: 500;
+                    opacity: 1;
+                }
+
+                &:focus {
+                    outline: 2px solid rgba(78, 100, 249, 0.8);
+                }
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+        }
+
+        .addSetup {
+            position: relative;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .right_buttons {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            gap: 20px;
+
+            .link_button {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 16px;
+                border-radius: 18px;
+                transition: all 0.2s ease-in-out;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                cursor: pointer;
+
+                svg {
+                    height: 15px;
+                    width: auto;
+
+                    & path {
+                        fill: $violet;
+                    }
+                }
+
+
+                &:hover {
+                    background-color: $violet-light-bg-hover;
+                }
+            }
+
+            .show {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 16px;
+                background-color: $yellow;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: $dark;
+                border-radius: 18px;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $yellow-dark;
+                }
+
+                svg {
+                    rotate: -90deg;
+
+                    path {
+                        stroke: $dark;
+                    }
+                }
+            }
+        }
+
+        .addCategories {
+
+            .firstAdd {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                &>div {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+
+                    p {
+                        color: $grey-light;
+                        font-weight: 500;
+                    }
+
+                    &>div>div {
+                        width: 200px;
+                    }
+
+                    & ul {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,150 @@
+@import "../../../styles/varibles.scss";
+
+.advantages {
+    width: 1280px;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    top: -120px;
+    z-index: 2;
+}
+
+.advantageCard {
+    width: 407px;
+    height: 345px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+    border-radius: 10px;
+    background-color: white;
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        img {
+            box-shadow: 0px 11px 20px rgba(127, 155, 187, 0.16);
+            border-radius: 50%;
+        }
+
+        h4 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            color: $violet;
+        }
+    }
+
+    p {
+        margin-bottom: auto;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 16px;
+        font-weight: 700;
+        border-radius: 18px;
+        transition: all 0.2s ease-in-out;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .yellow {
+        color: $dark;
+        background-color: $yellow;
+
+        &:hover {
+            background-color: #FEC100;
+        }
+
+        svg {
+            rotate: -90deg;
+
+            & path {
+                stroke: $dark;
+            }
+        }
+    }
+}
+
+.advantageCard_yellow {
+    width: 406px;
+    height: 345px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+    border-radius: 10px;
+    position: relative;
+
+    &::before {
+        content: url("../../../images/Mask.png");
+        position: absolute;
+        width: 406px;
+        height: 345px;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-color: $yellow;
+        border-radius: 10px;
+
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 35px;
+
+
+        h4 {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 36px;
+
+        }
+    }
+
+    p {
+        margin-bottom: auto;
+    }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 16px;
+        font-weight: 700;
+        border-radius: 18px;
+        transition: all 0.2s ease-in-out;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .violet {
+        color: white;
+        background: linear-gradient(270deg, #7E6AF3 0%, #6540CD 100%);
+        background-size: 300px;
+
+
+        &:hover {
+            background: linear-gradient(270deg, #7E6AF3 0%, #6540CD 0%);
+            background-position: -110px;
+        }
+
+        svg {
+            rotate: -90deg;
+
+            & path {
+                stroke: white;
+            }
+        }
+    }
+}

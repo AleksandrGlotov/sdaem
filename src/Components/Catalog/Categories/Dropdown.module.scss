@@ -1,0 +1,78 @@
+@import "../../../styles/varibles.scss";
+
+.dropdown_wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+        color: $violet;
+        font-weight: 500;
+    }
+}
+
+.dropdown {
+    position: relative;
+
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        background-color: $grey-bg;
+        border-radius: 18px;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 500;
+        width: 150px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $violet-light-bg-hover;
+        }
+
+        svg {
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    ul {
+        position: absolute;
+        top: 48px;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-width: 150px;
+        box-shadow: 0px 0px 40px rgba(39, 95, 158, 0.1);
+        z-index: 2;
+    }
+
+    li {
+        padding: 10px 15px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $grey-bg;
+        }
+    }
+
+    :global(li.active) {
+        background-color: $grey-bg;
+    }
+
+    :global(div.selectOpen) {
+        outline: 2px solid rgba(78, 100, 249, 0.8);
+
+        svg {
+            rotate: 180deg;
+        }
+    }
+}

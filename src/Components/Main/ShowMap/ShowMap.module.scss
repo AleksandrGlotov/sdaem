@@ -1,0 +1,72 @@
+@import "../../../styles/varibles.scss";
+
+
+.showMap_container {
+    padding-bottom: 205px;
+}
+
+.showMap_catalog {
+    padding-bottom: 75px;
+}
+
+.showMap_container, .showMap_catalog {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: url("../../../images/404-bg.png") no-repeat,
+    linear-gradient(360deg, #7E6AF3 15.95%, #6540CD 63.1%);
+    background-size: cover;
+
+    .showMap {
+        width: 390px;
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .link_button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            color: $dark;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            border-radius: 18px;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
+
+            &:hover {
+                background-color: $violet;
+                color: white;
+            }
+
+            svg {
+                height: 15px;
+                width: auto;
+
+                & path {
+                    fill: $yellow;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import "../../../styles/varibles.scss";
+
+.breadcrumbs {
+    display: flex;
+    list-style-type: none;
+    gap: 17px;
+    margin-top: 42px;
+    margin-bottom: 24px;
+
+    a {
+        position: relative;
+        line-height: 18px;
+
+        &:not(:first-child)::before {
+            content: "";
+            width: 3px;
+            height: 3px;
+            position: absolute;
+            top: 7.5px;
+            left: -10px;
+            background-color: $violet;
+        }
+
+        &:not(:last-child) {
+            color: $violet
+        }
+
+        &:last-child {
+            cursor:  default;
+            color: $grey;
+        }
+    }
+}

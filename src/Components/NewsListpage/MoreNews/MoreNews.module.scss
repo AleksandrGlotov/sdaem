@@ -1,0 +1,23 @@
+@import "../../../styles/varibles.scss";
+
+.moreNews_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $violet-light-gradient;
+    padding: 64px 0 100px;
+}
+
+.moreNews {
+    width: 1280px;
+
+    h2 {
+        margin-bottom: 44px;
+    }
+
+    .randomNews {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+}

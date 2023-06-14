@@ -1,0 +1,163 @@
+@import "../../../styles/varibles.scss";
+
+.sort_container {
+    padding: 24px 0 12px;
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .housecard_type {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: auto;
+        margin-right: 65px;
+    }
+
+    .housecard_type_basic {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        padding: 10px 16px;
+        border-radius: 18px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $grey-bg;
+        }
+
+        svg rect {
+            fill: $grey-light;
+        }
+
+        &.housecard_type_active {
+            font-weight: 600;
+            background-color: white;
+            box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+
+            svg rect {
+                fill: $violet;
+            }
+        }
+    }
+
+    .showMap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 184px;
+        font-weight: 500;
+        padding: 10px 16px;
+        border-radius: 18px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark;
+        cursor: pointer;
+        font-weight: 600;
+        background-color: white;
+        box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $violet-light-bg-hover;
+        }
+
+        svg {
+            width: auto;
+            height: 14px;
+
+            & path {
+                fill: $violet;
+            }
+        }
+    }
+
+
+    .dropdown_wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        p {
+            color: $violet;
+            font-weight: 500;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+
+
+        div {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            background-color: white;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 500;
+            width: 320px;
+            cursor: pointer;
+            box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: $violet-light-bg-hover;
+            }
+
+            svg:first-child {
+                margin-right: 10px;
+            }
+
+            svg:last-child {
+                margin-left: auto;
+            }
+
+            svg {
+                transition: all 0.2s ease-in-out;
+            }
+        }
+
+        ul {
+            position: absolute;
+            top: 48px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            width: 320px;
+            box-shadow: 0px 0px 40px rgba(39, 95, 158, 0.1);
+            z-index: 2;
+        }
+
+        li {
+            padding: 10px 15px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $dark;
+            cursor: pointer;
+        }
+
+        :global(li.active) {
+            background-color: $grey-bg;
+        }
+
+        :global(div.selectOpen) {
+            outline: 2px solid rgba(78, 100, 249, 0.8);
+
+            svg:last-child {
+                rotate: 180deg;
+            }
+        }
+    }
+}

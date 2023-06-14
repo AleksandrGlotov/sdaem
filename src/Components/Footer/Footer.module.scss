@@ -1,0 +1,117 @@
+@import "../../styles/varibles.scss";
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: $grey-blue;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: 0px -11px 40px 0px #275F9E0D;
+
+    .footer_container {
+        width: 1280px;
+        padding: 40px 0;
+        display: flex;
+        gap: 30px;
+    }
+    
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 297px;
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        p:first-of-type {
+            margin-bottom: 36px;
+        }
+    }
+
+    .footer_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer_right_first {
+        display: flex;
+        width: 953px;
+        gap: 30px;
+    }
+
+    .footer_1column, .footer_2column, .footer_3column {
+        display: flex;
+        flex-direction: column;
+        height: 102px;
+    }
+
+    .footer_1column {
+        font-weight: 700;
+        width: 188px;
+        gap: 21px;
+    }
+
+    .footer_2column {
+        width: 406px;
+        gap: 10px;
+
+        p {
+            font-weight: 700;
+        }
+        
+    }
+
+    .column_links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 53px;
+        height: 73px;
+
+    }
+
+    .footer_3column {
+        width: 406px;
+        gap: 8px;
+    }
+
+    .footer_right_second {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 34px;
+    }
+
+    .footer_socialblock {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        p {
+            font-weight: 500;
+            color: $dark;
+        }
+    }
+
+    .footer_socials {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    .footer_payment {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+

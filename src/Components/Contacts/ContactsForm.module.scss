@@ -1,0 +1,133 @@
+@import "../../styles/varibles.scss";
+
+
+.contacts_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 510px;
+    width: 625px;
+    background-color: $grey-light-bg;
+    box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+    border-radius: 10px;
+    padding: 40px 37px;
+
+
+    .form_first {
+        display: flex;
+        gap: 30px;
+
+        input {
+            max-width: 260px;
+        }
+    }
+
+    .form_label {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        position: relative;
+
+        label {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $grey;
+        }
+
+        &:hover,
+        &:focus {
+
+            input,
+            textarea {
+                outline: 2px solid rgba(102, 78, 249, 0.8);
+            }
+
+            svg path {
+                fill: $violet;
+                opacity: 1;
+            }
+        }
+
+        input,
+        textarea {
+            background: #F8F8F8;
+            border-radius: 30px;
+            padding: 15px 20px 15px 55px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+
+            &::placeholder {
+                color: $grey;
+            }
+
+            &:hover,
+            &:focus {
+                outline: 2px solid rgba(102, 78, 249, 0.8);
+            }
+        }
+
+        textarea {
+            resize: none;
+            height: 200px;
+            padding: 15px 20px;
+        }
+    }
+
+    .user_logo {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 47px;
+            left: 20px;
+
+            & path {
+                fill: $grey;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    .email_logo {
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 49px;
+            left: 20px;
+
+            & path {
+                fill: $grey;
+                opacity: 0.3;
+            }
+        }
+    }
+
+    button {
+        width: 200px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+        background-color: $violet;
+        padding: 12px 0;
+        border-radius: 33px;
+        align-self: center;
+        cursor: pointer;
+    }
+
+    .form_error {
+        position: absolute;
+        bottom: -20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $red;
+    }
+
+    .error_input input, .error_input textarea {
+        outline: 2px solid $red;
+    }
+}

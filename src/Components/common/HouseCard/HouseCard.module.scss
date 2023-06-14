@@ -1,0 +1,403 @@
+@import "../../../styles/varibles.scss";
+
+.housecard {
+    // maxheight: 577px;
+
+    .housecard_caption {
+        height: calc(100% - 226px);
+        justify-content: space-between;
+    }
+}
+
+.housecard,
+.housecard_list {
+    width: calc(1220px / 3);
+    border-radius: 10px;
+    background-color: $grey-light-bg;
+    box-shadow: 0px 10px 10px 0px #877CCA26;
+    position: relative;
+
+    .label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 12px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: white;
+        text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
+        background-color: $yellow;
+        border-radius: 0px 10px 10px 10px;
+        z-index: 1;
+    }
+
+    :global(.onePhoto) {
+        width: 100%;
+        height: 226px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .housecard_caption {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        .housecard_info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .info_price {
+                margin-bottom: 20px;
+
+                h3 {
+                    color: $violet;
+                }
+
+                p {
+                    color: $grey-light;
+                }
+            }
+
+            .info_rooms {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    padding: 8px;
+                    background-color: $grey-bg;
+                    border-radius: 20px;
+
+                    .user {
+                        height: 15px;
+                        width: 15px;
+                    }
+
+                    svg path {
+                        fill: $grey;
+                    }
+
+                    p {
+                        color: $grey;
+                        font-weight: 500;
+                    }
+
+                }
+            }
+        }
+
+        .info_address {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+
+            div {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .point {
+                    width: 12px;
+                    height: auto;
+                }
+
+                svg path {
+                    fill: $grey-light;
+                }
+
+                p {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+
+            }
+        }
+
+
+        h4 {
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .description {
+            margin-bottom: auto;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .hr {
+            width: 100%;
+            height: 1px;
+            background-color: $violet-light-bg;
+            margin-top: 24px;
+            margin-bottom: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .heart {
+                height: 33px;
+                width: 33px;
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(235, 87, 87, 0.1);
+                cursor: pointer;
+
+                svg path {
+                    stroke: $red;
+                }
+
+                &:hover svg path {
+                    fill: rgba(235, 87, 87, 0.4);
+                }
+
+                &_fill svg path {
+                    fill: $red;
+                }
+
+            }
+
+            .mobile_disabled {
+                position: relative;
+                padding: 10px 15px;
+                border-radius: 18px;
+                background-color: $grey-bg;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                color: $violet;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $violet-light-bg-hover;
+                }
+
+                svg path {
+                    fill: $violet;
+                }
+            }
+
+            .mobile_active .contact {
+                position: absolute;
+                bottom: 0;
+                left: -50%;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                width: 274px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+                border-radius: 10px;
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 32px;
+                    object-fit: cover;
+                    border: 5px solid $violet;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: $grey-light;
+                    margin-bottom: 5px;
+                }
+
+                h3 {
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    color: $violet;
+                    font-weight: 500;
+                    text-decoration: underline;
+                }
+            }
+
+            .contact {
+                display: none;
+            }
+
+            .social {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-top: 28px;
+
+                a {
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                svg path {
+                    fill: white;
+                }
+            }
+
+            .viber {
+                background-color: #7B519D;
+            }
+
+            .whatsapp {
+                background-color: #0DBB41;
+            }
+
+            .mail {
+                background-color: $violet;
+            }
+
+            .more {
+                padding: 10px 15px;
+                border-radius: 18px;
+                background: rgba(255, 213, 79, 0.1);
+                color: #FEC100;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: rgba(255, 213, 79, 0.4);
+                }
+            }
+        }
+    }
+}
+
+.mySwiper {
+    width: 100%;
+    height: 226px;
+    border-radius: 10px;
+}
+
+.mySwiper_list {
+    width: 538px;
+    border-radius: 10px;
+
+    :global(.swiper_slide) {
+        width: 538px;
+    }
+
+    :global(.swiper_slide img) {
+        display: block;
+        width: 538px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+}
+
+.housecard_list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    background-color: $grey-light-bg;
+    box-shadow: 0px 10px 40px 0px #877CCA26;
+    position: relative;
+
+    :global(.onePhoto) {
+        width: 538px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .label {
+        left: 0;
+        right: unset;
+        border-radius: 10px 0px 10px 10px;
+    }
+
+    .housecard_caption {
+        width: calc(100% - 538px);
+        height: 300px;
+        padding: 20px;
+
+        .housecard_info {
+
+            .info_price {
+                margin-bottom: 20px;
+                order: 1;
+
+            }
+
+        }
+
+        .description {
+            margin-bottom: auto;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .hr {
+            display: none;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .heart {
+                height: 33px;
+                width: 33px;
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(235, 87, 87, 0.1);
+                cursor: pointer;
+
+                svg path {
+                    stroke: $red;
+                }
+
+                &:hover svg path {
+                    fill: rgba(235, 87, 87, 0.4);
+                }
+
+                &_fill svg path {
+                    fill: $red;
+                }
+
+            }
+
+            .mobile_disabled {
+                order: -1;
+            }
+
+
+        }
+    }
+}

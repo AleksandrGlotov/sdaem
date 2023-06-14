@@ -1,0 +1,194 @@
+@import "../../styles/varibles.scss";
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .breadcrumps_container {
+        background: $violet-light-gradient;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .catalog_breadcrumps {
+        width: 1280px;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .filtersList {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 58px;
+
+
+            .filter {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 6px 10px;
+                background: $violet-light-bg;
+                color: $violet;
+                border-radius: 18px;
+                font-size: 14px;
+                line-height: 100%;
+
+                &:hover {
+                    background: $violet-light-bg-hover;
+                    cursor: pointer;
+                }
+
+                svg {
+                    display: none;
+                }
+            }
+
+            .filter_active svg {
+                display: block;
+            }
+            .filter_disabled {
+                display: none;
+            }
+
+        }
+    }
+    
+    .catalog_container {
+        width: 1280px;
+
+        >h3 {
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .houses_container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+    }
+
+    .pagination_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .pagination {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        list-style-type: none;
+        padding: 0;
+
+        .prev,
+        .next {
+            display: none;
+        }
+
+        .page a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 6px;
+            height: 22px;
+            font-size: 18px;
+            color: $grey;
+            cursor: pointer;
+
+            &:hover::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $grey;
+                bottom: -2px;
+            }
+        }
+
+        .page.active a {
+            font-weight: 700;
+            color: $dark;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $yellow;
+                bottom: -2px;
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            margin-right: 4px;
+            color: $grey;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+            background: #F4F5FA;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background: $violet-light-bg-hover;
+            }
+        }
+
+        svg path {
+            fill: $dark;
+        }
+
+        .vk {
+            width: 18px;
+            height: auto;
+        }
+
+        .fb {
+            width: 22px;
+            height: auto;
+        }
+
+        .small {
+            width: 15px;
+            height: auto;
+        }
+    }
+
+    .map_disabled, .catalog_disabled {
+        display: none;
+    }
+    
+    .map_active {
+        display: block;
+        margin-bottom: 24px;
+    }
+}
